@@ -16,7 +16,7 @@ class Firebase {
   constructor() {
     app.initializeApp(config);
 
-    
+    console.log(process.env.REACT_APP_API_KEY);
     this.auth = app.auth();
   }
 
