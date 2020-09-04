@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import { compose } from 'recompose';
 
 import { withFirebase } from '../Firebase';
 
 import * as ROUTES from '../../constants/routes';
 
+import '../../styles/sign_up.css'
+
 
 const SignUpPage = () => (
   <div>
-    <h1>SignUp</h1>
+    <h1>Sign up</h1>
     <SingUpForm/>
   </div>
 );
@@ -66,13 +69,16 @@ class SingUpFormBase extends Component {
       username === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
+      <form 
+        onSubmit={this.onSubmit} 
+        >
         <input
           name="username"
           value={username}
           onChange={this.onChange}
           type="text"
           placeholder="Full Name"
+          autoComplete="off"
         />
         <input
           name="email"
@@ -80,6 +86,7 @@ class SingUpFormBase extends Component {
           onChange={this.onChange}
           type="text"
           placeholder="Email Address"
+          autoComplete="off"
         />
         <input
           name="passwordOne"
@@ -87,6 +94,7 @@ class SingUpFormBase extends Component {
           onChange={this.onChange}
           type="password"
           placeholder="Password"
+          autoComplete="off"
         />
         <input
           name="passwordTwo"
@@ -94,6 +102,7 @@ class SingUpFormBase extends Component {
           onChange={this.onChange}
           type="password"
           placeholder="Confirm Password"
+          autoComplete="off"
         />
         <button 
           disabled={isInvalid}
@@ -115,7 +124,10 @@ const SingUpLink = () => (
   </p>
 );
 
-const SingUpForm = withRouter(withFirebase(SingUpFormBase));
+const SingUpForm = compose(
+  withRouter,
+  withFirebase,
+)(SingUpFormBase);
 
 export default SignUpPage;
 

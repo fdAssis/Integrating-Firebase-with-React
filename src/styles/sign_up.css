@@ -1,0 +1,58 @@
+h1 {
+  text-align: center;
+}
+
+form {
+  margin: 0 auto;
+  width: 300px;
+}
+
+input {
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 90%;
+  height: 30px;
+  margin: 5px 0px 0 10px;
+  border: solid 2px #58C9B9;
+  border-radius: 5px; 
+  text-align: left;
+  padding-left: 5px;
+  outline-color: #A593E0;
+}
+
+button {
+  margin: 10px 0 0 0 ;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height:5%;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  outline:none;
+}
+
+button:enabled {
+  background: #58C9B9;
+  color: white;
+}
+
+button:disabled {
+  background: #ccc7dd;
+  color: rgb(150, 150, 150);
+}
+
+button:hover:enabled{
+  background: #3db6a6;
+}
+
+p{
+  margin: 10px;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
