@@ -83,10 +83,10 @@ class SingUpFormBase extends Component {
         <input
           name="email"
           value={email}
+          autoComplete="off"
           onChange={this.onChange}
           type="text"
           placeholder="Email Address"
-          autoComplete="off"
         />
         <input
           name="passwordOne"

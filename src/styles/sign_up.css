@@ -20,14 +20,14 @@ input {
 }
 
 button {
-  margin: 10px 0 0 0 ;
-  position: absolute;
-  top: 60%;
+  margin: 30px 0 0 0;
+  position: relative;
+  top: 100%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 150px;
-  height:5%;
+  height:40px;
   border: none;
   border-radius: 5px;
   font-size: 20px;
@@ -48,11 +48,10 @@ button:hover:enabled{
   background: #3db6a6;
 }
 
-p{
-  margin: 10px;
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+p {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
 }
